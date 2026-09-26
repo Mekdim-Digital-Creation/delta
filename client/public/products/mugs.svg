@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Branded ceramic mug">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14101f"/><stop offset="1" stop-color="#1d1533"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ceramic" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#eef2f7"/><stop offset="1" stop-color="#c3cedd"/>
+    </linearGradient>
+    <linearGradient id="print" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fa0b6"/><stop offset="1" stop-color="#5c6b80"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <ellipse cx="400" cy="512" rx="190" ry="24" fill="#000814" opacity="0.45"/>
+
+  <g filter="url(#soft)">
+    <!-- handle behind -->
+    <path d="M566 268c62 0 62 92 0 92" stroke="url(#ceramic)" stroke-width="34" fill="none" stroke-linecap="round"/>
+
+    <!-- body -->
+    <path d="M262 226h292v168c0 62-58 100-146 100s-146-38-146-100z" fill="url(#ceramic)"/>
+    <!-- rim + coffee -->
+    <ellipse cx="408" cy="226" rx="146" ry="34" fill="url(#inner)"/>
+    <ellipse cx="408" cy="230" rx="130" ry="27" fill="#3f2a1d"/>
+    <ellipse cx="386" cy="222" rx="46" ry="9" fill="#ffffff" opacity="0.16"/>
+
+    <!-- printed wrap -->
+    <g>
+      <rect x="292" y="286" width="232" height="86" rx="10" fill="url(#print)" opacity="0.95"/>
+      <circle cx="332" cy="312" r="15" fill="#04121a" opacity="0.8"/>
+      <rect x="356" y="304" width="88" height="13" rx="6" fill="#ffffff" opacity="0.95"/>
+      <rect x="292" y="344" width="232" height="7" rx="3" fill="#ffffff" opacity="0.5"/>
+      <rect x="312" y="358" width="192" height="7" rx="3" fill="#ffffff" opacity="0.32"/>
+    </g>
+
+    <!-- gloss highlight -->
+    <path d="M300 258c-8 60-6 120 4 170" stroke="#ffffff" stroke-width="16" opacity="0.5" fill="none" stroke-linecap="round"/>
+    <path d="M520 262c6 54 6 108 0 164" stroke="#ffffff" stroke-width="8" opacity="0.28" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

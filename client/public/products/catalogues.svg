@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Product catalogue spread">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14101f"/><stop offset="1" stop-color="#1d1533"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pageL" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#e9edf5"/><stop offset="1" stop-color="#fdfdfe"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#fdfdfe"/><stop offset="1" stop-color="#e4e9f2"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000814" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <g filter="url(#soft)">
+    <g transform="translate(126 140)">
+      <!-- left page -->
+      <path d="M274 24C214 0 118 0 0 22v330c118-22 214-22 274 4z" fill="url(#pageL)"/>
+      <!-- right page -->
+      <path d="M274 24c60-24 156-24 274-2v330c-118-22-214-22-274 4z" fill="url(#pageR)"/>
+      <!-- spine shading -->
+      <path d="M274 24v332" stroke="#94a3b8" stroke-width="3" opacity="0.45"/>
+
+      <!-- left page content -->
+      <rect x="34" y="52" width="120" height="14" rx="7" fill="#1e293b"/>
+      <rect x="34" y="80" width="196" height="8" rx="4" fill="#b9c4d4"/>
+      <rect x="34" y="112" width="200" height="128" rx="8" fill="url(#brand)"/>
+      <path d="M34 208l52-44 44 34 48-48 56 56v34H34z" fill="#ffffff" opacity="0.28"/>
+      <circle cx="88" cy="156" r="24" fill="#ffffff" opacity="0.45"/>
+      <g fill="#c3cddb">
+        <rect x="34" y="262" width="200" height="8" rx="4"/>
+        <rect x="34" y="282" width="176" height="8" rx="4"/>
+        <rect x="34" y="302" width="200" height="8" rx="4"/>
+      </g>
+
+      <!-- right page content: 3-up product grid -->
+      <rect x="308" y="52" width="104" height="12" rx="6" fill="#1e293b"/>
+      <g>
+        <rect x="308" y="88" width="66" height="66" rx="8" fill="url(#brand)" opacity="0.9"/>
+        <rect x="388" y="88" width="66" height="66" rx="8" fill="#22d3ee" opacity="0.8"/>
+        <rect x="468" y="88" width="66" height="66" rx="8" fill="#a78bfa" opacity="0.85"/>
+        <g fill="#c3cddb">
+          <rect x="308" y="164" width="58" height="7" rx="3"/><rect x="388" y="164" width="52" height="7" rx="3"/><rect x="468" y="164" width="60" height="7" rx="3"/>
+        </g>
+
+        <rect x="308" y="196" width="66" height="66" rx="8" fill="#34d399" opacity="0.8"/>
+        <rect x="388" y="196" width="66" height="66" rx="8" fill="url(#brand)" opacity="0.75"/>
+        <rect x="468" y="196" width="66" height="66" rx="8" fill="#f472b6" opacity="0.8"/>
+        <g fill="#c3cddb">
+          <rect x="308" y="272" width="46" height="7" rx="3"/><rect x="388" y="272" width="58" height="7" rx="3"/><rect x="468" y="272" width="50" height="7" rx="3"/>
+        </g>
+      </g>
+      <rect x="308" y="302" width="226" height="8" rx="4" fill="#c3cddb"/>
+      <rect x="308" y="320" width="180" height="8" rx="4" fill="#d5dde8"/>
+      <rect x="308" y="338" width="140" height="8" rx="4" fill="#d5dde8"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Vinyl banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14101f"/><stop offset="1" stop-color="#1e1533"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vinyl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b21b6"/><stop offset="0.55" stop-color="#1e1b4b"/><stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- grommet rope -->
+  <path d="M96 92h608" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+
+  <g filter="url(#soft)">
+    <!-- main banner with a slight wave -->
+    <path d="M110 108h580v348c-58 22-116 22-174 6s-116-16-174 6-116 16-174-6z" fill="url(#vinyl)"/>
+    <path d="M110 108h580v348c-58 22-116 22-174 6s-116-16-174 6-116 16-174-6z" fill="#ffffff" opacity="0.06"/>
+
+    <!-- printed artwork -->
+    <path d="M156 172h488l-40 60H196z" fill="#22d3ee" opacity="0.85"/>
+    <rect x="196" y="262" width="300" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+    <rect x="256" y="296" width="180" height="12" rx="6" fill="#a78bfa" opacity="0.9"/>
+    <rect x="196" y="336" width="410" height="10" rx="5" fill="#ffffff" opacity="0.45"/>
+    <rect x="236" y="358" width="330" height="10" rx="5" fill="#ffffff" opacity="0.32"/>
+    <rect x="196" y="396" width="150" height="40" rx="20" fill="#22d3ee"/>
+    <rect x="222" y="412" width="98" height="9" rx="4" fill="#04121a" opacity="0.7"/>
+
+    <!-- hemmed edge -->
+    <path d="M110 108h580v16H110z" fill="#ffffff" opacity="0.14"/>
+    <path d="M110 440c58-22 116-22 174-6s116 16 174-6 116-16 174 6v16H110z" fill="#000814" opacity="0.3"/>
+
+    <!-- eyelets along top and bottom -->
+    <g fill="none" stroke="#cbd5e1" stroke-width="5">
+      <circle cx="150" cy="116" r="8"/><circle cx="260" cy="116" r="8"/><circle cx="370" cy="116" r="8"/>
+      <circle cx="480" cy="116" r="8"/><circle cx="590" cy="116" r="8"/><circle cx="676" cy="116" r="8"/>
+    </g>
+    <g fill="none" stroke="#cbd5e1" stroke-width="5" opacity="0.7">
+      <circle cx="150" cy="444" r="8"/><circle cx="262" cy="444" r="8"/><circle cx="374" cy="444" r="8"/>
+      <circle cx="486" cy="444" r="8"/><circle cx="598" cy="444" r="8"/>
+    </g>
+  </g>
+</svg>

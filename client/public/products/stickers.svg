@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Die-cut sticker sheets">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/><stop offset="1" stop-color="#101d30"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.48" r="0.6">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3eaf4"/>
+    </linearGradient>
+    <linearGradient id="s1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="s2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="s3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000814" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <g filter="url(#soft)">
+    <!-- backing sheet -->
+    <g transform="translate(196 122) rotate(-5)">
+      <rect x="8" y="10" width="400" height="470" rx="14" fill="#b9c4d4"/>
+      <rect width="400" height="470" rx="14" fill="url(#sheet)"/>
+
+      <!-- round sticker -->
+      <circle cx="102" cy="100" r="66" fill="url(#s1)"/>
+      <path d="M78 100h48M102 76v48" stroke="#04121a" stroke-width="11" stroke-linecap="round" opacity="0.8"/>
+
+      <!-- star sticker -->
+      <path d="M300 66l20 44 48 5-36 32 11 47-43-25-43 25 11-47-36-32 48-5z" fill="url(#s2)"/>
+
+      <!-- rounded-square sticker -->
+      <rect x="48" y="196" width="108" height="108" rx="28" fill="url(#s3)"/>
+      <circle cx="102" cy="250" r="26" fill="#04121a" opacity="0.55"/>
+
+      <!-- pill sticker -->
+      <rect x="186" y="216" width="164" height="68" rx="34" fill="url(#s2)"/>
+      <rect x="212" y="242" width="112" height="11" rx="5" fill="#ffffff" opacity="0.8"/>
+
+      <!-- heart sticker -->
+      <path d="M282 380c-30-22-52-8-52 16 0 26 34 44 52 62 18-18 52-36 52-62 0-24-22-38-52-16z" fill="url(#s1)"/>
+
+      <!-- small dots row -->
+      <g fill="url(#s3)">
+        <circle cx="70" cy="368" r="16"/><circle cx="112" cy="368" r="16"/>
+        <circle cx="154" cy="368" r="16"/><circle cx="196" cy="368" r="16"/>
+      </g>
+      <rect x="48" y="404" width="256" height="12" rx="6" fill="#c7d2e0"/>
+      <rect x="48" y="428" width="180" height="12" rx="6" fill="#dbe3ee"/>
+    </g>
+
+    <!-- peeled-back corner sheet in front -->
+    <g transform="translate(400 236) rotate(9)">
+      <rect width="220" height="266" rx="12" fill="#aab6c8" opacity="0.95"/>
+      <rect x="-4" y="-4" width="220" height="266" rx="12" fill="url(#sheet)"/>
+      <path d="M150 4h62a8 8 0 0 1 8 8v96z" fill="#0f172a" opacity="0.12"/>
+      <rect x="20" y="26" width="120" height="14" rx="7" fill="#1e293b" opacity="0.85"/>
+      <rect x="20" y="54" width="172" height="9" rx="4" fill="#94a3b8"/>
+      <rect x="20" y="74" width="140" height="9" rx="4" fill="#a9b6c6"/>
+      <rect x="20" y="104" width="172" height="54" rx="10" fill="url(#s1)" opacity="0.9"/>
+      <rect x="20" y="178" width="172" height="8" rx="4" fill="#c7d2e0"/>
+      <rect x="20" y="196" width="120" height="8" rx="4" fill="#dbe3ee"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Car magnet on vehicle">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14101f"/><stop offset="1" stop-color="#1c1533"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#3b4a63"/><stop offset="0.5" stop-color="#28324a"/><stop offset="1" stop-color="#161d2c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#64748b"/><stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <ellipse cx="400" cy="512" rx="290" ry="24" fill="#000814" opacity="0.5"/>
+
+  <g filter="url(#soft)">
+    <!-- van body -->
+    <path d="M92 424V300c0-26 20-44 46-44h300l86 74c22 6 38 24 38 46v48z" fill="url(#body)"/>
+    <!-- cab window -->
+    <path d="M452 272h74l70 62H452z" fill="url(#glass)" opacity="0.9"/>
+    <!-- cargo window -->
+    <rect x="150" y="278" width="252" height="96" rx="10" fill="url(#glass)" opacity="0.55"/>
+    <!-- body highlight -->
+    <path d="M92 392h616" stroke="#7c8ba3" stroke-width="3" opacity="0.35"/>
+
+    <!-- wheels -->
+    <circle cx="222" cy="424" r="52" fill="#0b0f19"/>
+    <circle cx="222" cy="424" r="26" fill="#334155"/>
+    <circle cx="222" cy="424" r="10" fill="#94a3b8"/>
+    <circle cx="618" cy="424" r="52" fill="#0b0f19"/>
+    <circle cx="618" cy="424" r="26" fill="#334155"/>
+    <circle cx="618" cy="424" r="10" fill="#94a3b8"/>
+
+    <!-- the magnet, applied to the side panel -->
+    <g>
+      <rect x="150" y="404" width="300" height="76" rx="12" fill="url(#brand)"/>
+      <rect x="150" y="404" width="300" height="76" rx="12" fill="#ffffff" opacity="0.07"/>
+      <!-- UV-lam top edge sheen -->
+      <rect x="150" y="404" width="300" height="10" rx="5" fill="#ffffff" opacity="0.3"/>
+      <circle cx="196" cy="442" r="22" fill="#04121a" opacity="0.55"/>
+      <path d="M186 442h20M196 432v20" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+      <rect x="230" y="424" width="150" height="15" rx="7" fill="#ffffff" opacity="0.95"/>
+      <rect x="230" y="450" width="104" height="10" rx="5" fill="#ffffff" opacity="0.6"/>
+      <!-- rounded die-cut corner indicator -->
+      <path d="M150 404a12 12 0 0 1 12-12h276a12 12 0 0 1 12 12z" fill="#ffffff" opacity="0.14"/>
+    </g>
+
+    <!-- headlight -->
+    <path d="M92 366h-0a20 20 0 0 1 20 20v18H92z" fill="#fbbf24" opacity="0.85"/>
+  </g>
+</svg>

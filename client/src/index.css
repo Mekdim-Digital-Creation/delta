@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-space text-slate-200 antialiased font-sans;
+    background-image:
+      radial-gradient(1100px 600px at 85% -10%, rgba(139, 92, 246, 0.14), transparent 60%),
+      radial-gradient(900px 520px at -10% 8%, rgba(34, 211, 238, 0.12), transparent 55%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-cyan/30 text-white;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0f19;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+    background: linear-gradient(180deg, #164e63, #5b21b6);
+  }
+}
+
+@layer components {
+  /* ── Glass panel ─────────────────────────────── */
+  .glass {
+    @apply bg-panel backdrop-blur-md border border-line;
+    box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  .glass-strong {
+    @apply bg-[#0e1526]/80 backdrop-blur-xl border border-white/10;
+  }
+
+  /* ── Text helpers ────────────────────────────── */
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-soft via-cyan to-violet bg-clip-text text-transparent;
+  }
+  .text-gradient-soft {
+    @apply bg-gradient-to-r from-cyan-soft to-violet-soft bg-clip-text text-transparent;
+  }
+
+  /* ── Buttons ─────────────────────────────────── */
+  .btn-glow {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-300 overflow-hidden;
+  }
+  .btn-primary {
+    @apply text-[#04121a] bg-gradient-to-r from-cyan-soft via-cyan to-violet hover:from-violet hover:via-cyan hover:to-cyan-soft;
+    box-shadow: 0 0 28px -6px rgba(34, 211, 238, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 42px -4px rgba(139, 92, 246, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    @apply glass text-slate-100 hover:border-cyan/40 hover:text-white;
+  }
+
+  /* ── Chip / tag ──────────────────────────────── */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300;
+  }
+
+  /* ── Futuristic grid backdrop ─────────────────── */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+  }
+
+  /* ── Form fields ──────────────────────────────── */
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 outline-none transition-colors duration-200 focus:border-cyan/70 focus:bg-white/[0.07];
+  }
+  .field-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-slate-400;
+  }
+
+  /* ── Scrollbar hidden ─────────────────────────── */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
+  }
+  .text-glow-violet {
+    text-shadow: 0 0 24px rgba(139, 92, 246, 0.45);
+  }
+}

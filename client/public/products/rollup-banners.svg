@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Roll-up banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/><stop offset="1" stop-color="#122032"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="banner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e7490"/><stop offset="0.5" stop-color="#0e2a52"/><stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/><stop offset="0.45" stop-color="#94a3b8"/><stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#475569"/><stop offset="0.5" stop-color="#94a3b8"/><stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <ellipse cx="400" cy="536" rx="230" ry="26" fill="#000814" opacity="0.45"/>
+
+  <g filter="url(#soft)">
+    <!-- top cassette -->
+    <rect x="288" y="66" width="224" height="30" rx="10" fill="url(#metal)"/>
+    <rect x="288" y="66" width="224" height="10" rx="5" fill="#ffffff" opacity="0.4"/>
+
+    <!-- banner face -->
+    <rect x="304" y="94" width="192" height="360" rx="6" fill="url(#banner)"/>
+    <!-- printed content -->
+    <circle cx="368" cy="168" r="34" fill="none" stroke="#22d3ee" stroke-width="8" opacity="0.95"/>
+    <path d="M352 168h32M368 152v32" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
+    <rect x="330" y="228" width="140" height="18" rx="9" fill="#ffffff" opacity="0.95"/>
+    <rect x="352" y="258" width="96" height="11" rx="5" fill="#67e8f9" opacity="0.9"/>
+    <rect x="330" y="296" width="140" height="9" rx="4" fill="#ffffff" opacity="0.55"/>
+    <rect x="346" y="314" width="108" height="9" rx="4" fill="#ffffff" opacity="0.4"/>
+    <rect x="330" y="332" width="126" height="9" rx="4" fill="#ffffff" opacity="0.4"/>
+    <rect x="330" y="366" width="140" height="46" rx="10" fill="#22d3ee" opacity="0.9"/>
+    <rect x="352" y="386" width="96" height="8" rx="4" fill="#04121a" opacity="0.75"/>
+
+    <!-- highlight sheen -->
+    <rect x="304" y="94" width="64" height="360" fill="#ffffff" opacity="0.07"/>
+
+    <!-- foot -->
+    <rect x="284" y="452" width="232" height="18" rx="6" fill="url(#metal)"/>
+    <rect x="252" y="466" width="296" height="26" rx="13" fill="url(#base)"/>
+    <rect x="252" y="466" width="296" height="8" rx="4" fill="#ffffff" opacity="0.28"/>
+  </g>
+</svg>

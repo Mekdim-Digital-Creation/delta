@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Custom printed t-shirt">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/><stop offset="1" stop-color="#111c2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cotton" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/><stop offset="0.55" stop-color="#e2e8f0"/><stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="print" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="shirtClip">
+      <path d="M400 128l-58 16-96 44 34 66 44-20v210h152V234l44 20 34-66-96-44z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <g filter="url(#soft)">
+    <!-- t-shirt body -->
+    <path d="M400 128l-58 16-96 44 34 66 44-20v210h152V234l44 20 34-66-96-44z" fill="url(#cotton)"/>
+
+    <g clip-path="url(#shirtClip)">
+      <!-- fabric folds -->
+      <path d="M340 150c-14 120-10 240-16 380h34c-8-140-6-260 4-372z" fill="#94a3b8" opacity="0.28"/>
+      <path d="M470 152c12 120 8 244 14 378h-30c8-140 6-258-6-370z" fill="#94a3b8" opacity="0.22"/>
+      <!-- collar -->
+      <path d="M368 132c10 24 54 24 64 0" stroke="#94a3b8" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <!-- printed logo on chest -->
+      <rect x="352" y="252" width="96" height="96" rx="22" fill="url(#print)"/>
+      <path d="M378 300h44M392 282l18 18 18-18" stroke="#04121a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85"/>
+      <rect x="352" y="368" width="96" height="12" rx="6" fill="#334155" opacity="0.8"/>
+      <rect x="372" y="390" width="56" height="9" rx="4" fill="#64748b"/>
+    </g>
+
+    <path d="M400 128l-58 16-96 44 34 66 44-20v210h152V234l44 20 34-66-96-44z" fill="none" stroke="#94a3b8" stroke-width="3" opacity="0.6"/>
+  </g>
+</svg>
