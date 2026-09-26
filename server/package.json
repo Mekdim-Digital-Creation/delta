@@ -8,6 +8,7 @@
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
     "seed": "node sql/seed.js",
+    "migrate": "node sql/migrate.js",
     "test": "node scripts/smoke.js"
   },
   "dependencies": {

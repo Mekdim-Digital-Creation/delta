@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS products (
   min_qty     INT            NOT NULL DEFAULT 1,
   icon        VARCHAR(60)    NOT NULL DEFAULT 'Printer',
   gradient    VARCHAR(40)    NOT NULL DEFAULT 'cyan',
-  image       VARCHAR(255)   NULL,
+  image       VARCHAR(500)   NULL,
   active      TINYINT(1)     NOT NULL DEFAULT 1,
   created_at  TIMESTAMP      NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at  TIMESTAMP      NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

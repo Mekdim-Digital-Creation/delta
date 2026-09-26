@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { PRODUCTS } from '../seedData.js';
+
 /**
  * Tiny JSON-file backed store used when no MySQL server is available
  * (`DB_DRIVER=memory`). It mirrors the repository interface in ./mysql so the
@@ -33,7 +35,21 @@ export default class MemoryStore {
       if (!Array.isArray(this.data[key])) this.data[key] = [];
     }
     if (!this.data.seq || typeof this.data.seq !== 'object') this.data.seq = {};
+    this.#backfillProductImages();
     return this.data;
+  }
+
+  /**
+   * Stores written before product images existed have `image: undefined` on
+   * every row, which would leave the photo-first catalog empty. Fill any gaps
+   * from the canonical fixtures by slug instead of forcing a data reset.
+   */
+  #backfillProductImages() {
+    for (const product of this.data.products) {
+      if (product.image) continue;
+      const fixture = PRODUCTS.find((p) => p.slug === product.slug);
+      if (fixture?.image) product.image = fixture.image;
+    }
   }
 
   save() {
